@@ -39,7 +39,6 @@ def mainfunc():
                 latsec=int(latlist[2].split('/')[0])/int(latlist[2].split('/')[1])
                 declat=(latsec/60+latmin)/60+latdeg
                 
-                
                 lon=str(geo['GPS GPSLongitude'])
                 lon=lon.lstrip('[')
                 lon=lon.rstrip(']')
@@ -48,15 +47,6 @@ def mainfunc():
                 lonmin=int(lonlist[1])
                 lonsec=int(lonlist[2].split('/')[0])/int(lonlist[2].split('/')[1])
                 declon=(lonsec/60+lonmin)/60+londeg
-                
-
-                '''
-                projmet="+proj=utm +zone=38 +north +datum=WGS84 +units=m +no_defs "
-                mycoords=pyproj.Proj(projmet)(declon,declat)
-                x=mycoords[0]
-                y=mycoords[1]
-                '''
-
                 
                 alt=str(geo['GPS GPSAltitude'])
                 altlist=alt.split('/')
